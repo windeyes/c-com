@@ -1,5 +1,7 @@
 <template>
-    <div :style="comStyle">这是一个icon</div>
+    <div :style="comStyle" :class="`chen-icon-${type}`">
+        <slot></slot>
+    </div>
 </template>
 
 <script setup lang="ts">

@@ -2,7 +2,10 @@
   "name": "monotest",
   "version": "1.0.0",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "dev": "pnpm -C play  dev",
+    "build:theme":"pnpm -C packages/theme-chalk build"
+  },
   "workspaces": [
     "packages/*",
     "play",
@@ -13,6 +16,8 @@
   "license": "ISC",
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
+    "gulp": "^5.0.0",
+    "sucrase": "^3.35.0",
     "typescript": "^5.5.4",
     "vite": "^5.4.2",
     "vue": "^3.4.38"

@@ -5,6 +5,9 @@ export const iconProps = {
     },
     color:{
         type:String
+    },
+    type:{
+        type:String
     }
 } as const
 
