@@ -1,0 +1,25 @@
+{
+  "name": "monotest",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {},
+  "workspaces": [
+    "packages/*",
+    "play",
+    "docs"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2",
+    "vue": "^3.4.38"
+  },
+  "dependencies": {
+    "@chen-com/components": "workspace:^",
+    "@chen-com/theme-chalk": "workspace:^",
+    "@chen-com/utils": "workspace:^"
+  }
+}
