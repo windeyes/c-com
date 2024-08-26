@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "pnpm -C play  dev",
-    "build:theme":"pnpm -C packages/theme-chalk build"
+    "build:theme": "pnpm -C packages/theme-chalk build"
   },
   "workspaces": [
     "packages/*",
@@ -23,6 +23,7 @@
     "vue": "^3.4.38"
   },
   "dependencies": {
+    "@chen-com/build-utils": "workspace:^",
     "@chen-com/components": "workspace:^",
     "@chen-com/theme-chalk": "workspace:^",
     "@chen-com/utils": "workspace:^"

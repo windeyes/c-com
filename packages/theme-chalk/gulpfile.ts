@@ -1,4 +1,4 @@
-import {series,src,dest} from 'gulp'
+import {series,src,dest,parallel} from 'gulp'
 import gulpSass from 'gulp-sass';
 import dartSass from 'sass';
 // 添加样式前缀
@@ -8,7 +8,7 @@ import postcss from 'postcss'
 import cssnano from 'cssnano'
 import { Transform } from 'stream'
 import type Vinly from 'vinyl'
-
+import { themeChalk } from '@chen-com/build-utils';
 /**
  * using `postcss` and `cssnano` to compress CSS
  * @returns
@@ -62,7 +62,10 @@ function comScss(){
     .pipe(compressWithCssnano())
     .pipe(dest("./dist/css"))
 }
-function dealFont(){
+function copyScss(){
+    return src('./dist/**').pipe(dest(themeChalk))
+}
+function copyfonts(){
     return src('./src/fonts/**').pipe(dest('./dist/fonts'))
 }
-export default series(comScss,dealFont)
+export default series(copyfonts,comScss,copyScss)

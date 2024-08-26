@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@chen-com/build-utils':
+        specifier: workspace:^
+        version: link:build/build-utils
       '@chen-com/components':
         specifier: workspace:^
         version: link:packages/component
@@ -36,6 +39,8 @@ importers:
       vue:
         specifier: ^3.4.38
         version: 3.4.38(typescript@5.5.4)
+
+  build/build-utils: {}
 
   packages/component: {}
 
