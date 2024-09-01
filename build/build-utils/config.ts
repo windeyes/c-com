@@ -1,5 +1,5 @@
 import path from 'path';
-import { distDir } from './paths';
+import { chenComOutDir } from './paths';
 export const modules = ['esm', 'cjs'] as const;
 export type Module = (typeof modules)[number];
 export const buildConfig = {
@@ -9,7 +9,7 @@ export const buildConfig = {
     ext: 'mjs',
     output: {
       name: 'es',
-      path: path.resolve(distDir, 'es'),
+      path: path.resolve(chenComOutDir, 'es'),
     },
     bundle: {
       path: 'chen-com/es',
@@ -21,7 +21,7 @@ export const buildConfig = {
     ext: 'js',
     output: {
       name: 'lib',
-      path: path.resolve(distDir, 'lib'),
+      path: path.resolve(chenComOutDir, 'lib'),
     },
     bundle: {
       path: 'chen-com/lib',
@@ -29,3 +29,7 @@ export const buildConfig = {
   },
 };
 export type BuildConfig = typeof buildConfig;
+export enum PKG  {
+  PKG_PREFIX = '@chen-com',
+  PKG_NAME = 'chen-com',
+}

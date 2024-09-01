@@ -1,0 +1,12 @@
+{
+  "name": "@chen-com/build",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build":"gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

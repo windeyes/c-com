@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "pnpm -C play  dev",
     "clean": "rimraf dist",
-    "build:theme": "pnpm -C packages/theme-chalk build"
+    "build:theme": "pnpm -C packages/theme-chalk build",
+    "build":"pnpm -C build build "
   },
   "workspaces": [
     "packages/*",
@@ -24,6 +25,7 @@
     "rimraf": "^6.0.1",
     "rollup-plugin-esbuild": "^6.1.1",
     "sucrase": "^3.35.0",
+    "ts-morph": "^23.0.0",
     "typescript": "^5.5.4",
     "vite": "^5.4.2",
     "vue": "^3.4.38"
