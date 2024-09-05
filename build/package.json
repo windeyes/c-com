@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "build":"gulp"
+    "build": "gulp"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "fs-extra": "^11.2.0"
+  }
 }

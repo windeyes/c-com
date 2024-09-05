@@ -59,13 +59,21 @@ function comScss(){
     return src('./src/index.scss')
     .pipe(sass.sync())
     .pipe(autoprefixer({ cascade: false }))
+    .on('data',data=>{
+      let content = data.contents.toString();
+      if (content) {
+        content = content.replaceAll('./fonts', '../fonts');
+        data.contents = Buffer.from(content);
+      }
+    }
+    )
     .pipe(compressWithCssnano())
     .pipe(dest("./dist/css"))
 }
-function copyScss(){
+function copyAll(){
     return src('./dist/**').pipe(dest(themeChalk))
 }
 function copyfonts(){
-    return src('./src/fonts/**').pipe(dest('./dist/fonts'))
+    return src('./src/fonts/**',{encoding: false}).pipe(dest(path.resolve(themeChalk,'fonts')))
 }
-export default series(copyfonts,comScss,copyScss)
+export default series(copyfonts,comScss,copyAll)

@@ -1,13 +1,15 @@
 {
     "name": "chen-com",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "description": "一个练手的web端组件库",
+    "main": "lib/index.js",
+    "module":"es/index.mjs",
+    "types":"es/index.d.ts",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
-    "author": "",
+    "author": "chenxujian",
     "license": "ISC"
   }
   
